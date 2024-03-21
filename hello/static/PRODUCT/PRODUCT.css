@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@200;400&display=swap');
+
+html {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(BG.png);
+    animation-duration: 3s;
+    animation-name: slidein;
+    background-size: 100%;
+}
+
+@keyframes slidein {
+  from {
+    background-size: 80%;
+  }
+
+  to {
+    background-size: 100%;
+  }
+}
+
+.SUHI{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: rgba(0, 0, 0, 0.6) 0 0 16px;
+    border-radius: 40px;
+    display: flex;
+    align-content: flex-start;
+}
+
+.SUHI img{
+    max-height: 100%;
+    max-width: 65%;
+    border-radius: 40px 0px 0px 40px;
+    
+
+}
+
+.Type, .INFO{
+    width: 80%;
+    margin: auto;
+    padding: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Type-Info{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.INFO{
+    align-items: center;
+}
+
+.INFO h1, p{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.addcartbtn{
+    width: 50%;
+    padding: 1%;
+    margin: auto;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #000;
+    border-radius: 100px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.closebtn{
+    background-image: url(btn.svg);
+    background-size: 100%;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    right: 20px;
+    top: 20px;
+    position: absolute;
+}

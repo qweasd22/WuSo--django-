@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{% static 'HOME/CSS/index.css' %}?v=5" rel="stylesheet" />
+    <title>WuSo</title>
+  </head>
+  <body>
+    <div class="Start">
+      <ul class="NAV">
+        <li>
+          <img
+            class="LOGO"
+            src="{% static 'HOME/RES/WuSo (Light).svg' %}"
+            alt="LOGO"
+          />
+        </li>
+        <li><h1 class="LOGO-TEXT">WuSo</h1></li>
+        <div class="ITEMS">
+          <a class="button" href="#MENU">МЕНЮ</a>
+          <button class="signin" onclick="SIGNIN()">
+            <img src="{% static 'HOME/RES/signin.svg' %}" />
+          </button>
+          <button onclick="cart()"><img src="{% static 'HOME/RES/CART.svg' %}" /></button>
+          <button class="openbtn" onclick="openForm()">
+            <img src="{% static 'HOME/RES/profile.svg' %}" />
+          </button>
+        </div>
+      </ul>
+      <div class="HOME">
+        <img src="{% static 'HOME/RES/WuSo (Dark).svg'%}" alt="LOGO" />
+        <h1>WORL OF JAPAN FOOD</h1>
+      </div>
+      <div class="SEP">
+        <img src="{% static 'HOME/RES/SEP.svg' %}" />
+      </div>
+    </div>
+    <div class="MENU" id="MENU">
+      <h1>МЕНЮ</h1>
+      <div class="CARDS">
+        {% for card in cards %} {{ card | safe }} {% endfor %}
+      </div>
+      
+    </div>
+    <div class="form-popup" id="myForm">
+      <form action="#" class="form-container">
+        <h1>Ваш профиль</h1>
+        <p>Логин - {{ user.username }}</p>
+        <p>Почта - {{ user.email }}</p>
+        <button type="button" class="btn" onclick="closeForm()">Закрыть</button>
+      </form>
+    </div>
+  </body>
+
+  <div class="cart-popup">
+    <form action="#" class="form-container">  
+        <h1>Корзина</h1>
+        
+    </form>
+  </div>
+  <script>
+    function GET_FOOD(ID) {
+      url = "/product/" + ID;
+      window.location.href = url;
+    }
+    function SIGNIN() {
+      url = "/register";
+      window.location.href = url;
+    }
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function cart() {
+      url = "/cart";
+      window.location.href = url;
+    }
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+  </script>
+</html>

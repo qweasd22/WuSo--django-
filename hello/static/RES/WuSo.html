@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:8000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./WuSo_files/index.css" rel="stylesheet">
+    <title>WuSo</title>
+</head>
+<body>
+    <div class="Start">
+        <ul class="NAV">
+            <li><img class="LOGO" src="./WuSo_files/WuSo (Light).svg" alt="LOGO"></li>
+            <li><h1 class="LOGO-TEXT">WuSo</h1></li>
+            <div class="ITEMS">
+                    <a class="button" href="http://127.0.0.1:8000/#MENU">МЕНЮ</a>
+                    <button><img src="./WuSo_files/CART.svg"></button>
+            </div>
+        </ul>
+        <div class="HOME">
+            <img src="./WuSo_files/WuSo (Dark).svg" alt="LOGO">
+            <h1>WORL OF JAPAN FOOD</h1>
+        </div>
+        <div class="SEP">
+            <img src="./WuSo_files/SEP.svg">
+        </div>
+    </div>
+    <div class="MENU" id="MENU">
+        <h1>МЕНЮ</h1>
+        <div class="CARDS">
+               
+                <div class="CARD">
+                <img src="./WuSo_files/Kanad.jpeg">
+                <div class="Info">
+                    <h2>Ролл</h2>
+                    <div class="Count-Info">
+                        <p>8шт</p>
+                        <p>225г</p>
+                    </div>
+                </div>
+                <h1>Канадский</h1>
+                <p>Состав: Угорь, лосось, сыр сливочный, огурец, авокадо, рис, нори</p>
+                <button onclick="GET_FOOD(4)">В корзину за 500₽</button>
+            </div>
+            
+                <div class="CARD">
+                <img src="./WuSo_files/kaliforniya-kopchenaya.jpg">
+                <div class="Info">
+                    <h2>Ролл</h2>
+                    <div class="Count-Info">
+                        <p>8шт</p>
+                        <p>250г</p>
+                    </div>
+                </div>
+                <h1>Калифорния</h1>
+                <p>Состав: Икра пери, рис, сливочный сыр, огурец, нори, семены кунжута</p>
+                <button onclick="GET_FOOD(2)">В корзину за 550₽</button>
+            </div>
+            
+                <div class="CARD">
+                <img src="./WuSo_files/SuHi.png">
+                <div class="Info">
+                    <h2>Ролл</h2>
+                    <div class="Count-Info">
+                        <p>8шт</p>
+                        <p>250г</p>
+                    </div>
+                </div>
+                <h1>Филадельфия</h1>
+                <p>Состав: Лосоь охлажденный, рис, сливочный сыр, огурец, нори, семены кунжута</p>
+                <button onclick="GET_FOOD(1)">В корзину за 650₽</button>
+            </div>
+            
+                <div class="CARD">
+                <img src="./WuSo_files/lapsha-udon-s-moreproduktami.jpg">
+                <div class="Info">
+                    <h2>Лапша</h2>
+                    <div class="Count-Info">
+                        <p>1шт</p>
+                        <p>330г</p>
+                    </div>
+                </div>
+                <h1>Острый Удон с Курицей</h1>
+                <p>Состав: Лапша рисовая, курица тирияке, корень лотоса, острый перец, водоросли, отварное яйцо</p>
+                <button onclick="GET_FOOD(3)">В корзину за 800₽</button>
+            </div>
+            
+        </div>
+    </div>
+
+<script>
+    function GET_FOOD(ID) {
+        url = "/product/" + ID;
+        window.location.href = url;
+    }
+</script>
+</body></html>

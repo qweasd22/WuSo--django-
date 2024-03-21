@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'PRODUCT/PRODUCT.css' %}?v=8" rel="stylesheet">
+    <title>WuSo</title>
+</head>
+<body>
+    <div class = "SUHI">
+        <img src="{{IMAGE}}">
+        <div class = "INFO">
+            <button class="closebtn" onclick="closebtn()" ></button>
+            <div class = "Type">
+                <h2>{{TYPE}}</h2>
+                <div class = "Type-Info">
+                    <h2>{{COUNT}}шт</h2>
+                    <h2>{{WEIGHT}}г</h2>
+                </div>
+            </div>
+            <h1>{{NAME}}</h1>
+            <p>{{ABOUT}}</p>
+            <p>{{TEXT}}</p>
+            <button class="addcartbtn" onclick="ADD_CART({{ID}})">В корзину за {{PRICE}}₽</button>
+            
+            
+        </div>
+    </div>
+</body>
+<script>
+    function ADD_CART(ID){
+        url = "add_cart/"
+        window.location.href = url
+    }
+
+    function closebtn(){
+        url = "home/"
+        window.location.href = url
+    }
+
+</script>
+</html>
