@@ -14,7 +14,9 @@ urlpatterns = [
        re_path('home/', views.home, name='home'),
        path('admin/', admin.site.urls),
        path('close/', views.close, name='close'),
-       path("cart/", views.cart, name="cart")
+       path("cart/", views.cart, name="cart"),
+       path("cart1/", views.cart1, name="cart1")
+
        
       
 ]
