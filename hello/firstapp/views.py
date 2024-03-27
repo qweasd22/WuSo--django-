@@ -93,6 +93,8 @@ def clear_cart(request):
     cart.product = ""
     cart.save()
 
+def cart1(request):
+    return render(request, "CART/cart1.html")
 def cart(request):
     user = request.user
     cart = Cart.objects.get(user = user)
