@@ -10,7 +10,18 @@ body {
   animation: shimmer 5s infinite;
 }
 
-
+@media screen and (max-width: 600px) {
+    body {
+        height: 100vh;
+    }
+    .box {
+        width: 90%;
+    }
+    .btn {
+        font-size: 30px;
+    }
+    
+}
 @keyframes shimmer {
   0% {
     background-position: 0% 50%;
