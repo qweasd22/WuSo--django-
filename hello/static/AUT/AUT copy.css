@@ -4,12 +4,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 105vh;
     background: linear-gradient(45deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
   background-size: 400% 400%;
   animation: shimmer 5s infinite;
 }
 
+@media screen and (max-width: 600px) {
+    body {
+        height: 100vh;
+    }
+    .box {
+        width: 90%;
+    }
+    .btn {
+        font-size: 30px;
+    }
+    
+}
 
 @keyframes shimmer {
   0% {

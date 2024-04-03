@@ -34,6 +34,12 @@ def index(request):
 
 from django.shortcuts import render, get_object_or_404
 
+def cart1(request):
+    return render(request, "CART/cart1.html")
+
+def cart2(request):
+    return render(request, "CART/cart2.html")
+
 
 def product(request, product_id):
     food = get_object_or_404(Food, id=product_id)
