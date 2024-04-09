@@ -1,5 +1,8 @@
 from django.db import models
 
+аpp_label = 'firstapp'
+
+
 class Food(models.Model):
     type = models.TextField()
     count = models.TextField()
