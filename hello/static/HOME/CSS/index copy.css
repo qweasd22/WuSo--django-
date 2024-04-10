@@ -29,19 +29,7 @@ html::-webkit-scrollbar {
     font-style: normal;
 }
 
-.NAV{
-    margin: 0;
-    padding: 0 2%;
-    background-color: #1e1e1e;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
 
-.LOGO{
-    height: var(--item-logo);
-}
 
 .LOGO-TEXT{
     color: #fff;

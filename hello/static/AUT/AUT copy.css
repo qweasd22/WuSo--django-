@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 105vh;
     background: linear-gradient(45deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
   background-size: 400% 400%;
   animation: shimmer 5s infinite;
@@ -14,69 +14,9 @@ body {
 @keyframes shimmer {
   0% {
     background-position: 0% 50%;
+    
   }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-
-
-
-
-
-
-
-
-
-
-  
 }
-div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-h1 {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-}
-
-form {
-    width: 80%;
-    margin: 20px;
-    padding: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 40%;
-    margin: auto;
-}
-.box {
-    width: 500px;
-    margin: 20px;
-    border-bottom: 20px solid #03a9f4;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-.box h1 {
-    color: #000000;
-    background: #03a9f4;
-    padding: 10px 20px;
-    font-size: 20px;
-    font-weight: 700;
-    width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
 .box form {
     position: relative;
     background: #fff;
